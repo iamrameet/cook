@@ -1,0 +1,52 @@
+{
+  "name": "cook-language",
+  "displayName": "Cook Programming Language",
+  "description": "Syntax highlighting for the Cook programming language",
+  "version": "0.2.0",
+  "publisher": "cook-lang",
+  "main": "./extension.js",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "cook",
+      "aliases": ["Cook", "cook"],
+      "extensions": [".cook"],
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "light": "./images/cook-icon.svg",
+        "dark": "./images/cook-icon.svg"
+      }
+    }],
+    "grammars": [{
+      "language": "cook",
+      "scopeName": "source.cook",
+      "path": "./syntaxes/cook.tmLanguage.json"
+    }],
+    "snippets": [
+      {
+        "language": "cook",
+        "path": "./snippets/cook.json"
+      }
+    ]
+  },
+  "keywords": [
+    "cook",
+    "language",
+    "syntax",
+    "highlighting"
+  ],
+  "activationEvents": [
+    "onLanguage:cook"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "echo Compiled successfully",
+    "watch": "echo Watching...",
+    "test": "echo No tests yet"
+  }
+}

@@ -1,0 +1,27 @@
+// Test file for Cook language IntelliSense
+
+// Define some ingredients (variables)
+ingredient flour = 2.5;
+ingredient sugar = 1.5;
+ingredient eggs = 3;
+
+// Use the ingredients
+taste "Flour: " + flour + " cups";
+taste "Sugar: " + sugar + " cups";
+taste "Eggs: " + eggs;
+
+// Define a recipe with parameters
+recipe bake(temperature, time) {
+    taste "Baking at " + temperature + " degrees for " + time + " minutes";
+    
+    // Use the ingredients inside the recipe
+    taste "Using " + flour + " cups of flour";
+    taste "Using " + sugar + " cups of sugar";
+    taste "Using " + eggs + " eggs";
+}
+
+// Call the recipe
+cook bake(350, 30);
+
+// Try typing here to test IntelliSense:
+// 

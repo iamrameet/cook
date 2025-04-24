@@ -1,0 +1,39 @@
+{
+  "Ingredient Declaration": {
+    "prefix": "ingredient",
+    "body": [
+      "ingredient ${1:name} = ${2:value};$0"
+    ],
+    "description": "Declare a new ingredient (variable)"
+  },
+  "Recipe Declaration": {
+    "prefix": "recipe",
+    "body": [
+      "recipe ${1:name}(${2:parameters}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Declare a new recipe (function)"
+  },
+  "Taste Statement": {
+    "prefix": "taste",
+    "body": [
+      "taste ${1:\"${2:message}\"};$0"
+    ],
+    "description": "Output a value with taste (print)"
+  },
+  "Cook Call": {
+    "prefix": "cook",
+    "body": [
+      "cook ${1:recipeName}(${2:arguments});$0"
+    ],
+    "description": "Call a recipe (function)"
+  },
+  "Comment Block": {
+    "prefix": "comment",
+    "body": [
+      "// ${1:comment}$0"
+    ],
+    "description": "Add a comment"
+  }
+}

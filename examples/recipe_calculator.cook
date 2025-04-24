@@ -1,0 +1,37 @@
+// Recipe Calculator in Cook language
+
+// Welcome message
+taste "Welcome to the Recipe Calculator!";
+taste "----------------------------";
+
+// Define ingredients (variables)
+ingredient flour = 2.5;  // cups
+ingredient sugar = 1.5;  // cups
+ingredient eggs = 3;     // count
+ingredient milk = 0.75;  // cups
+ingredient servings = 8; // people
+
+// Display the base recipe
+taste "Base Recipe (for " + servings + " people):";
+taste "- Flour: " + flour + " cups";
+taste "- Sugar: " + sugar + " cups";
+taste "- Eggs: " + eggs + " count";
+taste "- Milk: " + milk + " cups";
+taste "";
+
+// Define a recipe (function) to calculate ingredients for different servings
+recipe calculate(desired_servings) {
+    ingredient ratio = desired_servings / servings;
+    
+    taste "Recipe for " + desired_servings + " people:";
+    taste "- Flour: " + (flour * ratio) + " cups";
+    taste "- Sugar: " + (sugar * ratio) + " cups";
+    taste "- Eggs: " + (eggs * ratio) + " count";
+    taste "- Milk: " + (milk * ratio) + " cups";
+    taste "";
+}
+
+// Calculate for different numbers of servings
+cook calculate(4);   // Half the original
+cook calculate(16);  // Double the original
+cook calculate(12);  // 1.5x the original
